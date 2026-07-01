@@ -138,7 +138,7 @@ footer { padding: 2rem 3rem; border-top: 1px solid rgba(255,255,255,0.05); displ
 .lightbox { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.97); align-items: center; justify-content: center; }
 .lightbox.open { display: flex; }
 .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
-.lightbox-close { position: absolute; top: 1.5rem; right: 2rem; background: none; border: none; color: rgba(255,255,255,0.35); font-size: 0.75rem; cursor: pointer; letter-spacing: 0.15em; font-family: 'Inter', sans-serif; text-transform: uppercase; }
+.lightbox-close { position: absolute; top: 1.5rem; right: 2rem; background: none; border: none; color: rgba(255,255,255,0.35); font-size: 0.75rem; cursor: pointer; letter-spacing: 0.15em; font-family: 'Inter', sans-serif; text-transform: uppercase; z-index: 1002; }
 .lightbox-close:hover { color: white; }
 .lightbox-nav { position: absolute; top: 0; bottom: 0; display: flex; align-items: center; background: none; border: none; color: rgba(255,255,255,0.4); font-size: 2.2rem; font-family: 'Cormorant Garamond', serif; cursor: pointer; padding: 0 1.5rem; transition: color 0.3s; z-index: 1001; }
 .lightbox-nav:hover { color: var(--gold-light); }
@@ -252,6 +252,7 @@ footer { padding: 2rem 3rem; border-top: 1px solid rgba(255,255,255,0.05); displ
         <div class="gallery-item" onclick="openLb('images/cadi5.webp', this)"><img src="images/cadi5.webp" loading="lazy"><div class="gallery-caption" data-tr="Deniz Cadısı VII" data-en="Sea Witch VII">Deniz Cadısı VII</div></div>
         <div class="gallery-item" onclick="openLb('images/studio3.webp', this)"><img src="images/studio3.webp" loading="lazy"><div class="gallery-caption" data-tr="Kızıl Deniz Cadısı" data-en="Crimson Sea Witch">Kızıl Deniz Cadısı</div></div>
         <div class="gallery-item" onclick="openLb('images/studio5.webp', this)"><img src="images/studio5.webp" loading="lazy"><div class="gallery-caption" data-tr="Zümrüt Deniz Cadısı" data-en="Emerald Sea Witch">Zümrüt Deniz Cadısı</div></div>
+        <div class="gallery-item" onclick="openLb('images/studio4.webp', this)"><img src="images/studio4.webp" loading="lazy"><div class="gallery-caption" data-tr="Atölyede" data-en="In the Studio">Atölyede</div></div>
       </div>
     </div>
 
@@ -278,14 +279,13 @@ footer { padding: 2rem 3rem; border-top: 1px solid rgba(255,255,255,0.05); displ
         <div class="gallery-item" onclick="openLb('images/deniz2.webp', this)"><img src="images/deniz2.webp" loading="lazy"><div class="gallery-caption" data-tr="Denizkızı II" data-en="Mermaid II">Denizkızı II</div></div>
         <div class="gallery-item" onclick="openLb('images/deniz3.webp', this)"><img src="images/deniz3.webp" loading="lazy"><div class="gallery-caption" data-tr="Denizkızı III" data-en="Mermaid III">Denizkızı III</div></div>
         <div class="gallery-item" onclick="openLb('images/deniz4.webp', this)"><img src="images/deniz4.webp" loading="lazy"><div class="gallery-caption" data-tr="Denizkızı IV" data-en="Mermaid IV">Denizkızı IV</div></div>
-        <div class="gallery-item" onclick="openLb('images/deniz5.webp', this)"><img src="images/deniz5.webp" loading="lazy"><div class="gallery-caption" data-tr="Denizkızı V" data-en="Mermaid V">Denizkızı V</div></div>
+        <div class="gallery-item" onclick="openLb('images/vapur13.webp', this)"><img src="images/vapur13.webp" loading="lazy"><div class="gallery-caption" data-tr="Denizkızı V" data-en="Mermaid V">Denizkızı V</div></div>
         <div class="gallery-item" onclick="openLb('images/deniz6.webp', this)"><img src="images/deniz6.webp" loading="lazy"><div class="gallery-caption" data-tr="Denizkızı VI" data-en="Mermaid VI">Denizkızı VI</div></div>
         <div class="gallery-item" onclick="openLb('images/deniz7.webp', this)"><img src="images/deniz7.webp" loading="lazy"><div class="gallery-caption" data-tr="Turuncu Balık" data-en="Orange Fish">Turuncu Balık</div></div>
         <div class="gallery-item" onclick="openLb('images/deniz11.webp', this)"><img src="images/deniz11.webp" loading="lazy"><div class="gallery-caption" data-tr="Soyut I" data-en="Abstract I">Soyut I</div></div>
         <div class="gallery-item" onclick="openLb('images/deniz12.webp', this)"><img src="images/deniz12.webp" loading="lazy"><div class="gallery-caption" data-tr="Soyut II" data-en="Abstract II">Soyut II</div></div>
         <div class="gallery-item" onclick="openLb('images/deniz13.webp', this)"><img src="images/deniz13.webp" loading="lazy"><div class="gallery-caption" data-tr="Soyut III" data-en="Abstract III">Soyut III</div></div>
         <div class="gallery-item" onclick="openLb('images/deniz14.webp', this)"><img src="images/deniz14.webp" loading="lazy"><div class="gallery-caption" data-tr="Soyut IV" data-en="Abstract IV">Soyut IV</div></div>
-        <div class="gallery-item" onclick="openLb('images/deniz19.webp', this)"><img src="images/deniz19.webp" loading="lazy"><div class="gallery-caption" data-tr="Denizkızı XI" data-en="Mermaid XI">Denizkızı XI</div></div>
       </div>
     </div>
 
@@ -304,7 +304,6 @@ footer { padding: 2rem 3rem; border-top: 1px solid rgba(255,255,255,0.05); displ
         <div class="gallery-item" onclick="openLb('images/vapur10.webp', this)"><img src="images/vapur10.webp" loading="lazy"><div class="gallery-caption" data-tr="Vapur X" data-en="Ferry X">Vapur X</div></div>
         <div class="gallery-item" onclick="openLb('images/vapur11.webp', this)"><img src="images/vapur11.webp" loading="lazy"><div class="gallery-caption" data-tr="Vapur XI" data-en="Ferry XI">Vapur XI</div></div>
         <div class="gallery-item" onclick="openLb('images/vapur12.webp', this)"><img src="images/vapur12.webp" loading="lazy"><div class="gallery-caption" data-tr="Vapur XII" data-en="Ferry XII">Vapur XII</div></div>
-        <div class="gallery-item" onclick="openLb('images/vapur13.webp', this)"><img src="images/vapur13.webp" loading="lazy"><div class="gallery-caption" data-tr="Vapur XIII" data-en="Ferry XIII">Vapur XIII</div></div>
       </div>
     </div>
   </div>
@@ -321,15 +320,7 @@ footer { padding: 2rem 3rem; border-top: 1px solid rgba(255,255,255,0.05); displ
       <div class="studio-item" onclick="openLb('images/studio2.webp', this)"><img src="images/studio2.webp" loading="lazy"><div class="gallery-caption" data-tr="Atölyede" data-en="In the Studio">Atölyede</div></div>
       <div class="studio-item" onclick="openLb('images/studio9.webp', this)"><img src="images/studio9.webp" loading="lazy"><div class="gallery-caption" data-tr="Çalışırken" data-en="At Work">Çalışırken</div></div>
       <div class="studio-item wide" onclick="openLb('images/studio10.webp', this)"><img src="images/studio10.webp" loading="lazy"><div class="gallery-caption" data-tr="Çalışırken" data-en="At Work">Çalışırken</div></div>
-      <div class="studio-item" onclick="openLb('images/studio4.webp', this)"><img src="images/studio4.webp" loading="lazy"><div class="gallery-caption" data-tr="Atölyede" data-en="In the Studio">Atölyede</div></div>
-      <div class="studio-item wide" onclick="openLb('images/studio8.webp', this)"><img src="images/studio8.webp" loading="lazy"><div class="gallery-caption" data-tr="Sergi Salonu" data-en="Exhibition Hall">Sergi Salonu</div></div>
-      <div class="studio-item" onclick="openLb('images/studio6.webp', this)"><img src="images/studio6.webp" loading="lazy"><div class="gallery-caption" data-tr="Sergi Açılışı" data-en="Exhibition Opening">Sergi Açılışı</div></div>
-      <div class="studio-item" onclick="openLb('images/studio7.webp', this)"><img src="images/studio7.webp" loading="lazy"><div class="gallery-caption" data-tr="Sergi Açılışı" data-en="Exhibition Opening">Sergi Açılışı</div></div>
       <div class="studio-item" onclick="openLb('images/cadi2.webp', this)"><img src="images/cadi2.webp" loading="lazy"><div class="gallery-caption" data-tr="Deniz Cadısı IV" data-en="Sea Witch IV">Deniz Cadısı IV</div></div>
-      <div class="studio-item wide" onclick="openLb('images/studio11.webp', this)"><img src="images/studio11.webp" loading="lazy"><div class="gallery-caption" data-tr="Evde" data-en="At Home">Evde</div></div>
-      <div class="studio-item" onclick="openLb('images/studio12.webp', this)"><img src="images/studio12.webp" loading="lazy"><div class="gallery-caption" data-tr="Evde" data-en="At Home">Evde</div></div>
-      <div class="studio-item" onclick="openLb('images/studio13.webp', this)"><img src="images/studio13.webp" loading="lazy"><div class="gallery-caption" data-tr="Evde" data-en="At Home">Evde</div></div>
-      <div class="studio-item" onclick="openLb('images/studio14.webp', this)"><img src="images/studio14.webp" loading="lazy"><div class="gallery-caption" data-tr="Evde" data-en="At Home">Evde</div></div>
     </div>
   </div>
 </section>
