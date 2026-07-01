@@ -103,7 +103,7 @@ section { padding: 7rem 3rem; }
 /* STUDIO */
 #studio { background: var(--ocean); }
 .studio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-.studio-item { overflow: hidden; }
+.studio-item { overflow: hidden; cursor: pointer; }
 .studio-item img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.78); transition: filter 0.5s, transform 0.5s; display: block; aspect-ratio: 4/3; }
 .studio-item:hover img { filter: brightness(1); transform: scale(1.03); }
 .studio-item.wide { grid-column: span 2; }
@@ -181,8 +181,8 @@ footer { padding: 2rem 3rem; border-top: 1px solid rgba(255,255,255,0.05); displ
   <div class="hero-text-side">
     <p class="hero-loc">Foça, Izmir</p>
     <h1 class="hero-name">M. Necati<br><em>Çiftçi</em></h1>
-    <p class="hero-desc" data-lang="tr" style="display:block">Denizin derinliklerini tuvale taşıyan ekspresyonist ressam. Her tablonun içinde gizlenen bir denizkızı var.</p>
-    <p class="hero-desc" data-lang="en">An expressionist painter who carries the depths of the sea onto canvas. A mermaid hides within every painting.</p>
+    <p class="hero-desc" data-lang="tr" style="display:block">Denizin derinliklerini tuvale ve müziğe taşıyan, Karşıyakalı bir sanatçı.</p>
+    <p class="hero-desc" data-lang="en">An artist who carries the depths of the sea onto canvas and into music.</p>
     <div class="hero-cta">
       <a href="#gallery" class="btn-primary" id="cta-gallery">Galeriyi Gör</a>
       <a href="#music" class="btn-ghost" id="cta-music">Müziği Dinle</a>
@@ -247,6 +247,8 @@ footer { padding: 2rem 3rem; border-top: 1px solid rgba(255,255,255,0.05); displ
         <div class="gallery-item" onclick="openLb('images/cadi3.webp')"><img src="images/cadi3.webp" loading="lazy"><div class="gallery-caption" data-tr="Deniz Cadısı V" data-en="Sea Witch V">Deniz Cadısı V</div></div>
         <div class="gallery-item" onclick="openLb('images/cadi4.webp')"><img src="images/cadi4.webp" loading="lazy"><div class="gallery-caption" data-tr="Deniz Cadısı VI" data-en="Sea Witch VI">Deniz Cadısı VI</div></div>
         <div class="gallery-item" onclick="openLb('images/cadi5.webp')"><img src="images/cadi5.webp" loading="lazy"><div class="gallery-caption" data-tr="Deniz Cadısı VII" data-en="Sea Witch VII">Deniz Cadısı VII</div></div>
+        <div class="gallery-item" onclick="openLb('images/studio3.webp')"><img src="images/studio3.webp" loading="lazy"><div class="gallery-caption" data-tr="Kızıl Deniz Cadısı" data-en="Crimson Sea Witch">Kızıl Deniz Cadısı</div></div>
+        <div class="gallery-item" onclick="openLb('images/studio5.webp')"><img src="images/studio5.webp" loading="lazy"><div class="gallery-caption" data-tr="Zümrüt Deniz Cadısı" data-en="Emerald Sea Witch">Zümrüt Deniz Cadısı</div></div>
       </div>
     </div>
 
@@ -311,16 +313,14 @@ footer { padding: 2rem 3rem; border-top: 1px solid rgba(255,255,255,0.05); displ
     <h2 class="section-title" data-lang="tr" style="display:block">Sanatçının Dünyasından</h2>
     <h2 class="section-title" data-lang="en">From the Artist's World</h2>
     <div class="studio-grid">
-      <div class="studio-item wide"><img src="images/studio1.webp" loading="lazy"></div>
-      <div class="studio-item"><img src="images/studio2.webp" loading="lazy"></div>
-      <div class="studio-item"><img src="images/studio9.webp" loading="lazy"></div>
-      <div class="studio-item wide"><img src="images/studio10.webp" loading="lazy"></div>
-      <div class="studio-item"><img src="images/studio5.webp" loading="lazy"></div>
-      <div class="studio-item"><img src="images/studio4.webp" loading="lazy"></div>
-      <div class="studio-item wide"><img src="images/studio8.webp" loading="lazy"></div>
-      <div class="studio-item"><img src="images/studio6.webp" loading="lazy"></div>
-      <div class="studio-item"><img src="images/studio7.webp" loading="lazy"></div>
-      <div class="studio-item wide"><img src="images/studio3.webp" loading="lazy"></div>
+      <div class="studio-item wide" onclick="openLb('images/studio1.webp')"><img src="images/studio1.webp" loading="lazy"></div>
+      <div class="studio-item" onclick="openLb('images/studio2.webp')"><img src="images/studio2.webp" loading="lazy"></div>
+      <div class="studio-item" onclick="openLb('images/studio9.webp')"><img src="images/studio9.webp" loading="lazy"></div>
+      <div class="studio-item wide" onclick="openLb('images/studio10.webp')"><img src="images/studio10.webp" loading="lazy"></div>
+      <div class="studio-item" onclick="openLb('images/studio4.webp')"><img src="images/studio4.webp" loading="lazy"></div>
+      <div class="studio-item wide" onclick="openLb('images/studio8.webp')"><img src="images/studio8.webp" loading="lazy"></div>
+      <div class="studio-item" onclick="openLb('images/studio6.webp')"><img src="images/studio6.webp" loading="lazy"></div>
+      <div class="studio-item" onclick="openLb('images/studio7.webp')"><img src="images/studio7.webp" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -405,6 +405,7 @@ const strings = {
 
 function setLang(l) {
   lang = l;
+  document.documentElement.lang = l;
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent.trim().toLowerCase() === l));
   const d = strings[l];
   Object.keys(d).forEach(id => { const el = document.getElementById(id); if(el) el.textContent = d[id]; });
